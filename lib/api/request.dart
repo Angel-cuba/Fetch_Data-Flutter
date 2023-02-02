@@ -13,13 +13,14 @@ class HTTPRequest {
     if (response.statusCode == 200) {
       String data = response.body;
       //! Convert the data to List<Map>
-      items = jsonDecode(data);
+      List result = jsonDecode(data);
+      items = result.map((e) => e as Map).toList();
     }
     return items;
   }
 
 //!Fetch details of a single user
-  Future<Map> getSingleUser(String id) async {
+  Future<Map> getSingleItem(id) async {
     Map item = {};
 
     //? Fetch the data from the API
