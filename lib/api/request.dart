@@ -69,7 +69,7 @@ class HTTPRequest {
   }
 
   //! Delete an item from the API
-  Future<bool> deleteItem(String id) async {
+  Future<bool> deleteItem(id) async {
     bool result = false;
     //? Delete the item from the API
     http.Response response = await http

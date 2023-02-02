@@ -40,6 +40,10 @@ class _ListOfPostsState extends State<ListOfPosts> {
                       color: Colors.white70,
                       surfaceTintColor: Colors.yellowAccent,
                       child: ListTile(
+                        leading: CircleAvatar(
+                          backgroundColor: Colors.blueAccent,
+                          child: Text(data[index]['id'].toString()),
+                        ),
                         title: Text(data[index]['title']),
                         subtitle: Text(data[index]['body']),
                         onTap: () {
